@@ -1,0 +1,29 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+server:
+  port: 8082
+spring:
+  application:
+    name: role-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/roles
+    username: username
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  config:
+    service-url: http://localhost:8083/api/v1/users
+management:
+  tracing:
+    sampling:
+      probability: 1.0

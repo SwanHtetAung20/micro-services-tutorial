@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: discovery
+  config:
+    import: optional:configserver:http://localhost:8888
+
+    # i did this by watching [[Bouali Ali]] you tube channel.!
